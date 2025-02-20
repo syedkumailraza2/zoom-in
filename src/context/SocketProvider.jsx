@@ -11,7 +11,7 @@ export const useSocket = ()=>{
 
 //a provider that give the access of sockets to complete react app
 export const SocketProvider = (props)=>{
-    const socket = useMemo(()=>io('localhost:8000'), [])
+    const socket = useMemo(()=>io('https://zoom-in-backend.vercel.app/'), [])
 return (
     <SocketContext.Provider value={socket}>
         {props.children}
